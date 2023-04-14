@@ -1,6 +1,7 @@
 'use client'
-import { SyntheticEvent, use, useEffect, useState } from "react";
+import { SyntheticEvent, useState } from "react";
 import { useQuery, useMutation } from "../convex/_generated/react";
+import Link from "next/link";
 
 export default function Home() {
 
@@ -8,10 +9,6 @@ export default function Home() {
   const tasks = useQuery('todos:get')
   const addTask = useMutation('todos:add')
   const clearDB = useMutation('todos:deleteAll')
-
-  useEffect(() => {
-    console.log(tasks)
-  },[tasks])
 
   const addTaskHandler = (e:SyntheticEvent) => {
     e.preventDefault()
@@ -37,6 +34,7 @@ export default function Home() {
 
       </div>
       ))}
+      <Link href="/demo">Link to demo</Link>
   </main>
   )
 }
