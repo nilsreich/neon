@@ -7,6 +7,7 @@ export default defineSchema({
     completed: s.boolean(),
     ownerID: s.id("users"),
   }),
+  
   users: defineTable({
     name: s.string(),
     tokenIdentifier: s.string(),
