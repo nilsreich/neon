@@ -3,5 +3,10 @@
   "team": "nilsreich",
   "prodUrl": "https://original-coyote-381.convex.cloud",
   "functions": "convex/",
-  "authInfo": []
+  "authInfo": [
+    {
+      "domain": "https://wired-shepherd-4.clerk.accounts.dev/",
+      "applicationID": "convex"
+    }
+  ]
 }

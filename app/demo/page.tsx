@@ -2,9 +2,22 @@
 import Link from "next/link";
 
 export default async function Demo () {
-    const test = async() => {
-        console.log("test");
-    }
+    const test = async(name) => {
+        const res = await fetch('/api/hello',{
+        
+
+            method: 'POST',
+            body: JSON.stringify({
+              name: 'John Doe'
+            })
+         })
+       
+           const data = await res.json()
+  
+           console.log(data)
+         }
+         
+    
     return (
     <div>
       <h1>Home</h1>

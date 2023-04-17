@@ -11,6 +11,7 @@
 
 import type { ApiFromModules } from "convex/api";
 import type * as todos from "../todos";
+import type * as users from "../users";
 
 /**
  * A type describing your app's public Convex API.
@@ -23,4 +24,5 @@ import type * as todos from "../todos";
  */
 export type API = ApiFromModules<{
   todos: typeof todos;
+  users: typeof users;
 }>;
